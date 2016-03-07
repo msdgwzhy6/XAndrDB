@@ -1,2 +1,2 @@
 # XAndrDB
-MyBatis For Android, open source database ORM operating framework for Android 
+MyBatis For Android,The ORM framework operation on the open source database of android
