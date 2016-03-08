@@ -2,12 +2,14 @@ package com.xcode.xandrdb.Session;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.xcode.xandrdb.Factory.HandlerFactory;
 import com.xcode.xandrdb.Factory.SessionFactory;
 import com.xcode.xandrdb.interfaces.Session;
 
 import android.app.Application;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 public class SessionApplication extends Application implements Session
@@ -26,7 +28,8 @@ public class SessionApplication extends Application implements Session
 	{
 		if (mSession != null)
 		{
-			mSession.openOrCreateDatabase(SessionFactory.getConfig().DB_Name, Context.MODE_PRIVATE, null);
+			SQLiteDatabase database = mSession.openOrCreateDatabase(SessionFactory.getConfig().DB_Name, Context.MODE_PRIVATE, null);
+			database.close();
 		}
 		return mSession;
 	}

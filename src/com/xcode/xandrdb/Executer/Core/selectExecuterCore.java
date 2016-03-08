@@ -501,7 +501,7 @@ public class selectExecuterCore
 		    for(Type typeArgument : typeArguments)
 		    {
 		        typeArgClass = (Class) typeArgument;
-		        System.out.println("typeArgClass = " + typeArgClass);
+		        //System.out.println("typeArgClass = " + typeArgClass);
 		    }
 		}
 		

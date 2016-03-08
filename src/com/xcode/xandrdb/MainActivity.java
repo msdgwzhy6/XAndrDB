@@ -12,18 +12,17 @@ import android.os.Bundle;
 
 public class MainActivity extends Activity
 {
+	test t1 = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Session session = SessionFactory.getSession(new SessionConfig().setDBName("xiaolei"));
-		test t1 = session.getMapper(test.class);
-		//t1.create("xiaolei");
+		t1 = session.getMapper(test.class);
+		t1.create("xiaolei");
 		t1.insert();
-		List<User> users = t1.select("xiaolei");
-		users.add(new User());
-		int count = t1.getCount();
-		System.out.println(users);
+		List<User> list = t1.select("xiaolei");
+		
 	}
 }

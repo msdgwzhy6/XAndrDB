@@ -48,7 +48,7 @@ public class SelectExecuter implements HandlerExecuter
 			{
 				object = selectExecuterCore.cusorToJavaBean(cursor, returnType);
 			}
-			System.out.println(object);
+			//System.out.println(object);
 		} catch (Exception e)
 		{
 			e.printStackTrace();

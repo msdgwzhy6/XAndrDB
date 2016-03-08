@@ -30,8 +30,8 @@ public interface test
 	public List<User> select(@Param("name")String name);
 	
 	//新建操作
-	@Create("create table #{tablename}(_id integer primary key autoincrement,sname text,snumber text)")
-	public String create(@name("tablename")String tablename);
+	@Create("create table #{tabname}(_id integer primary key autoincrement,sname text,snumber text)")
+	public String create(@Param("tabname")String tabname);
 	
 	@Select("select count(*) as num from xiaolei")
 	public int getCount();

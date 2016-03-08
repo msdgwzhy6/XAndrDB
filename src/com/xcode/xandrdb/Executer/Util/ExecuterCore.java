@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import android.util.Log;
+
 import com.xcode.xandrdb.annotation.Param;
 import com.xcode.xandrdb.annotation.name;
 
@@ -17,6 +19,7 @@ import com.xcode.xandrdb.annotation.name;
  * 所有执行器的核心技术类
  * @author 肖蕾
  */
+@SuppressWarnings("deprecation")
 public class ExecuterCore
 {
 	/**
@@ -139,7 +142,7 @@ public class ExecuterCore
 				}
 			}
 		}
-		System.out.println("NativeSql:\n" + sql);
+		Log.i("XAndrDB","NativeSql:" + sql);
 		return sql;
 	}
 }

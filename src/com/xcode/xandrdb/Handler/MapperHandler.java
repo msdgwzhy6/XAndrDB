@@ -5,6 +5,8 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import android.util.Log;
+
 import com.xcode.xandrdb.Factory.ExecuterFactory;
 import com.xcode.xandrdb.Session.SessionApplication;
 import com.xcode.xandrdb.interfaces.HandlerExecuter;
@@ -26,7 +28,7 @@ public class MapperHandler implements InvocationHandler
 				throw new RuntimeException(t);
 			}
 		}
-		System.out.println("Execute Anotation……");
+		Log.i("XAndrDB","Execute Anotation……");
 		mExecuter = ExecuterFactory.getHandler(method);
 		if (mExecuter == null)
 		{
